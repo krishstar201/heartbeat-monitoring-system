@@ -1,30 +1,40 @@
 # Heartbeat Monitoring System
 
-This project demonstrates a simple heartbeat monitoring system using Python sockets.
-
 ## Overview
-The system consists of a client and server:
-- The client sends periodic heartbeat messages.
-- The server monitors active clients and detects failures if heartbeats are missed.
+This project implements a real-time heartbeat monitoring system using Python sockets.
+
+The system follows a client-server architecture:
+- Clients send periodic heartbeat signals.
+- Server tracks active clients and detects failures if heartbeat stops.
 
 ## Features
-- Real-time heartbeat tracking
+- Real-time heartbeat monitoring
 - Automatic client timeout detection
-- Multi-threaded server handling multiple clients
-- Automatic client reconnection
+- Multi-client support using multithreading
+- Auto-reconnect mechanism
+- Logging of activity
 
-## Technologies Used
+## Tech Stack
 - Python
 - Socket Programming
 - Multithreading
 
 ## How to Run
 
-### 1. Start server
+### Start Server
 python server.py
 
-### 2. Start clients
+### Start Client
 python client.py
 
+## Sample Output
+
+Server:
+[12:00:01] Server: New connection  
+[12:00:05] Server: Received HEARTBEAT  
+
+Client:
+[12:00:05] Client: Sent heartbeat  
+
 ## Use Case
-This project simulates monitoring of data pipelines or distributed systems to detect failures in real time.
+This system simulates monitoring of distributed systems or data pipelines by detecting failures in real time.
